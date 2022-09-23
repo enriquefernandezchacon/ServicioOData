@@ -42,5 +42,23 @@ namespace EjercitoOData.Controllers
             _db.SaveChanges();
             return Created(ejercito);
         }
+
+        [EnableQuery]
+        public IActionResult Delete([FromBody] Ejercito ejercito)
+        {
+            var ejercitoBorrado = _db.Ejercitos.Find(ejercito.Id);
+            _db.Ejercitos.Remove(ejercitoBorrado);
+            _db.SaveChanges();
+            return Ok();
+        }
+
+        [EnableQuery]
+        public IActionResult Put([FromBody] Ejercito ejercito)
+        {
+            _db.Ejercitos.Remove(_db.Ejercitos.ElementAt(ejercito.Id - 1));
+            _db.Ejercitos.Add(ejercito);
+            _db.SaveChanges();
+            return Put(ejercito);
+        }
     }
 }
