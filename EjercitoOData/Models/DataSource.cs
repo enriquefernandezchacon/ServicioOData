@@ -22,7 +22,7 @@ namespace EjercitoOData.Models
             {
                 Id = 1,
                 Nombre = "Equipo A",
-                FechaNacimiento = DateTime.Now,
+                FechaNacimiento = DateTime.Now.AddYears(-2),
                 FuerzaCombate = 1000,
                 Ubicacion = "Canarias"
             });
@@ -31,7 +31,7 @@ namespace EjercitoOData.Models
             {
                 Id = 2,
                 Nombre = "Todos cojos",
-                FechaNacimiento = DateTime.Now,
+                FechaNacimiento = DateTime.Now.AddYears(-5),
                 FuerzaCombate = 14,
                 Ubicacion = "Loja (Granada)"
             });
@@ -40,7 +40,7 @@ namespace EjercitoOData.Models
             {
                 Id = 3,
                 Nombre = "Ay Mi Madre",
-                FechaNacimiento = DateTime.Now,
+                FechaNacimiento = DateTime.Now.AddYears(-3),
                 FuerzaCombate = 25,
                 Ubicacion = "Madrid"
             });
@@ -49,7 +49,7 @@ namespace EjercitoOData.Models
             {
                 Id = 4,
                 Nombre = "Team JordiESP",
-                FechaNacimiento = DateTime.Now,
+                FechaNacimiento = DateTime.Now.AddMonths(-7),
                 FuerzaCombate = 500,
                 Ubicacion = "Ciudad real"
             });
@@ -58,7 +58,7 @@ namespace EjercitoOData.Models
             {
                 Id = 5,
                 Nombre = "Por favor Dios",
-                FechaNacimiento = DateTime.Now,
+                FechaNacimiento = DateTime.Now.AddYears(-5).AddMonths(8),
                 FuerzaCombate = 700,
                 Ubicacion = "El cielito lindo"
             });

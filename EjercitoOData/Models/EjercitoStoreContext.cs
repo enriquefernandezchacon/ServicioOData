@@ -8,18 +8,14 @@ namespace EjercitoOData.Models
 {
     public class EjercitoStoreContext : DbContext
     {
+        public DbSet<Ejercito> Ejercitos { get; set; }
         public EjercitoStoreContext(DbContextOptions<EjercitoStoreContext> options) : base(options)
         {
+
         }
-        public DbSet<Ejercito> Ejercitos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Ejercito>().OwnsOne(x => x.Ubicacion);
         }
 
     }
 }
-
-/*
- * 
- */
